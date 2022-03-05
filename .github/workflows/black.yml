@@ -38,7 +38,7 @@ jobs:
           cp pyproject.toml .github/linters
 
       - name: Black
-        uses: docker://github/super-linter:v4
+        uses: github/super-linter/slim@v4
         if: always()
         env:
           # run linter on everything to catch preexisting problems
@@ -48,4 +48,4 @@ jobs:
           # Run only black
           VALIDATE_PYTHON_BLACK: true
           PYTHON_BLACK_CONFIG_FILE: pyproject.toml
-          USE_FIND_ALGORITHM: true
+          FILTER_REGEX_EXCLUDE: .*tests/ast-parsing/(expected|compile)/.*
