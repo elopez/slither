@@ -48,4 +48,4 @@ jobs:
           # Run only black
           VALIDATE_PYTHON_BLACK: true
           PYTHON_BLACK_CONFIG_FILE: pyproject.toml
-          LOG_LEVEL: DEBUG
+          USE_FIND_ALGORITHM: true
